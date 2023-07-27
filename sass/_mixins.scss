@@ -1,0 +1,7 @@
+@mixin burgerBTN {
+	position: absolute;
+	right: 0;
+	height: 3px;
+	content: "";
+	background-color: #fff;
+}
