@@ -22,6 +22,11 @@ body {
   width: 100%;
 }
 
+.zoom-img {
+  cursor: zoom-in;
+  transform: scale(2);
+}
+
 .logo {
   position: relative;
   background-color: rgb(30, 30, 30);
@@ -401,6 +406,10 @@ body {
 
 .madeby {
   font-weight: bold;
+  transition: color 0.2s;
+  cursor: pointer;
+}
+.madeby:hover {
   color: rgb(176, 73, 255);
 }
 
@@ -449,11 +458,14 @@ body {
   justify-content: space-evenly;
   align-items: flex-start;
   flex-wrap: wrap;
+  overflow: hidden;
+}
+.arizona-container__box-img {
+  overflow: hidden;
 }
 .arizona-container__box-img img {
   height: 32rem;
   width: 100%;
-  overflow: hidden;
 }
 .arizona-container__box-img-items img {
   width: 30%;
@@ -519,10 +531,11 @@ body {
   position: relative;
   font-size: 3.3rem;
   background-color: white;
-  padding: 0 1rem 1rem 0;
+  padding: 0 1rem 0 1rem;
   z-index: 2;
 }
 .arizona-container__box2-description p {
+  margin: 3rem 0;
   font-size: 1.8rem;
   text-align: center;
 }
@@ -533,6 +546,30 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   width: 100%;
+}
+.arizona-container__box2-textiles-btns {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 75%;
+  margin-top: 3rem;
+}
+.arizona-container__box2-textiles-btns--btn {
+  padding: 1.2rem 0;
+  margin: 0 0.5rem 0 0.5rem;
+  width: 15rem;
+  background: none;
+  border: 1.5px solid rgb(30, 30, 30);
+  box-shadow: 2px 1px 3px rgba(43, 43, 43, 0.3);
+  letter-spacing: 0.15rem;
+  font-size: 1.4rem;
+  transition: border-radius 0.3s, transform 0.3s, border 0.3s;
+  cursor: pointer;
+}
+.arizona-container__box2-textiles-btns--btn:hover {
+  border-radius: 5px;
+  transform: scale(0.95);
+  border: 1.5px solid rgb(255, 164, 37);
 }
 .arizona-container__box2-textiles-title {
   position: relative;
@@ -554,11 +591,80 @@ body {
   z-index: 1;
 }
 .arizona-container__box2-textiles-title h3 {
-  padding: 0 1rem 1rem 0;
+  padding: 0 1rem 0 1rem;
   text-align: center;
   font-size: 3.3rem;
   background-color: #fff;
   z-index: 2;
+}
+
+.company_container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.company_container__text {
+  margin: 3rem 2rem;
+  text-align: center;
+  font-size: 1.8rem;
+}
+.company_container__square {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 34rem;
+  height: 23rem;
+  margin: 2rem;
+  border-radius: 18px;
+  border-top-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  box-shadow: 0 0 6px 2px rgba(43, 43, 43, 0.3);
+  transition: transform 0.3s;
+}
+.company_container__square:hover {
+  transform: scale(1.05);
+}
+.company_container__square--img {
+  position: absolute;
+  top: 3rem;
+  height: 3.5rem;
+}
+.company_container__square--text {
+  position: absolute;
+  text-align: center;
+  top: 10rem;
+  margin: 0 1rem;
+  font-size: 1.8rem;
+}
+
+.buttons {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.85);
+  z-index: 1000;
+  overflow: hidden;
+  display: none;
+}
+.buttons__img {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+}
+.buttons__icon {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  height: 4rem;
 }
 
 @media (min-width: 768px) {
@@ -630,7 +736,7 @@ body {
     width: 50%;
   }
 }
-@media (min-width: 768px) and (min-width: 862px) {
+@media (min-width: 862px) {
   .arizona-container__box-text {
     margin: 5rem 2rem 0 2rem;
   }
@@ -670,6 +776,10 @@ body {
   .arizona-container__box2-textiles::after {
     left: 3rem;
     right: 3rem;
+  }
+  .company_container {
+    flex-wrap: wrap;
+    flex-direction: row;
   }
 }
 @media (min-width: 1000px) {
@@ -844,5 +954,32 @@ body {
   .arizona-container__box-img-items img {
     width: 25%;
     height: 10rem;
+  }
+  .buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.85);
+    z-index: 1000;
+    overflow: hidden;
+    display: none;
+  }
+  .buttons__img {
+    background-size: cover;
+    background-position: center;
+    width: 100rem;
+    height: 70rem;
+    margin: 2rem;
+  }
+  .buttons__icon {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    height: 7rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  .buttons__icon:hover {
+    transform: scale(1.1);
   }
 }/*# sourceMappingURL=style.css.map */
