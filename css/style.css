@@ -467,9 +467,17 @@ body {
   height: 32rem;
   width: 100%;
 }
+.arizona-container__box-img-items {
+  margin-top: 1rem;
+  cursor: pointer;
+}
 .arizona-container__box-img-items img {
   width: 30%;
   height: 10rem;
+  transition: scale 0.2s;
+}
+.arizona-container__box-img-items img:hover {
+  scale: 0.9;
 }
 .arizona-container__box-text {
   margin: 5rem 2rem 0 2rem;

@@ -19,6 +19,8 @@ const softImg = document.querySelector(".softImg")
 const soft2Img = document.querySelector(".soft2Img")
 const html = document.querySelector("html")
 const itemPhoto = document.querySelector(".photo")
+const imgContainer = document.querySelector(".arizona-container__box-img-items")
+const allItemsImages = imgContainer.querySelectorAll("img")
 
 const checkTextarea = () => {
 	if (textarea.value === "") {
@@ -111,6 +113,12 @@ const handleCurrentYear = () => {
 	const year = new Date().getFullYear()
 	footerYear.innerText = year
 }
+
+allItemsImages.forEach(img =>
+	img.addEventListener("click", () => {
+		itemPhoto.src = img.src
+	})
+)
 
 navBtn.addEventListener("click", handleNav)
 handleCurrentYear()

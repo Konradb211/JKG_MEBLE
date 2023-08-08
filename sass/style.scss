@@ -534,9 +534,15 @@ body {
 				width: 100%;
 			}
 			&-items {
+				margin-top: 1rem;
+				cursor: pointer;
 				img {
 					width: 30%;
 					height: 10rem;
+					transition: scale 0.2s;
+					&:hover {
+						scale: 0.9;
+					}
 				}
 			}
 		}
