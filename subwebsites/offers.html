@@ -45,15 +45,68 @@
             <div class="page">
                 <h2 class="page__title">Oferta</h2>
             </div>
-            <select class="list">
+            <select class="list" autocomplete="off">
                 <option value="furnitures" selected disabled>Wybierz mebel</option>
                 <option value="all">Wszyskie meble</option>
-                <option value="bed">Łóżka</option>
                 <option value="kitchen-corner">Narożniki kuchenne</option>
                 <option value="corner">Narożniki</option>
+                <option value="bed">Łóżka</option>
                 <option value="pouffe">Siedziska</option>
             </select>
             <div class="container">
+                <div class="container__box kitchenCorners">
+                    <a href="london.html">
+                        <img class="container__box-img " src="../img/London/LONDON monolith.png" alt="">
+                        <div class="container__box-things">
+                            <p class="container__box-things--text">London</p>
+                            <p class="container__box-things--text">1699,00 zł</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="container__box kitchenCorners">
+                    <a href="paris.html">
+                        <img class="container__box-img " src="../img/Paris/PARIS SOFT08.png" alt="">
+                        <div class="container__box-things">
+                            <p class="container__box-things--text">Paris</p>
+                            <p class="container__box-things--text">1699,00 zł</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="container__box kitchenCorners">
+                    <a href="praga.html">
+                        <img class="container__box-img " src="../img/Praga/PRAGA SOFT17.png" alt="">
+                        <div class="container__box-things">
+                            <p class="container__box-things--text">Praga</p>
+                            <p class="container__box-things--text">1799,00 zł</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="container__box kitchenCorners">
+                    <a href="porto.html">
+                        <img class="container__box-img " src="../img/Porto/PORTO MONOLITH.png" alt="">
+                        <div class="container__box-things">
+                            <p class="container__box-things--text">Porto</p>
+                            <p class="container__box-things--text">1499,00 zł</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="container__box corners">
+                    <a href="denver.html">
+                        <img class="container__box-img" src="../img/Denver/DENVER 84.png" alt="">
+                        <div class="container__box-things">
+                            <p class="container__box-things--text">Denver</p>
+                            <p class="container__box-things--text">1399,00 zł</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="container__box corners">
+                    <a href="kanas.html">
+                        <img class="container__box-img" src="../img/Kansas/KANSAS 63.png" alt="">
+                        <div class="container__box-things">
+                            <p class="container__box-things--text">Kansas</p>
+                            <p class="container__box-things--text">1399,00 zł</p>
+                        </div>
+                </div>
                 <div class="container__box beds">
                     <a href="/subwebsites/arizona.html">
                         <img class="container__box-img" src="../img/Arizona/ARIZONA.png" alt="">
@@ -108,59 +161,6 @@
                         </div>
                     </a>
                 </div>
-                <div class="container__box kitchenCorners">
-                    <a href="london.html">
-                        <img class="container__box-img " src="../img/London/LONDON monolith.png" alt="">
-                        <div class="container__box-things">
-                            <p class="container__box-things--text">London</p>
-                            <p class="container__box-things--text">1499,00 zł</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="container__box kitchenCorners">
-                    <a href="paris.html">
-                        <img class="container__box-img " src="../img/Paris/PARIS SOFT08.png" alt="">
-                        <div class="container__box-things">
-                            <p class="container__box-things--text">Paris</p>
-                            <p class="container__box-things--text">1499,00 zł</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="container__box kitchenCorners">
-                    <a href="praga.html">
-                        <img class="container__box-img " src="../img/Praga/PRAGA SOFT17.png" alt="">
-                        <div class="container__box-things">
-                            <p class="container__box-things--text">Praga</p>
-                            <p class="container__box-things--text">1649,00 zł</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="container__box kitchenCorners">
-                    <a href="porto.html">
-                        <img class="container__box-img " src="../img/Porto/PORTO MONOLITH.png" alt="">
-                        <div class="container__box-things">
-                            <p class="container__box-things--text">Porto</p>
-                            <p class="container__box-things--text">1649,00 zł</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="container__box corners">
-                    <a href="denver.html">
-                        <img class="container__box-img" src="../img/Denver/DENVER 84.png" alt="">
-                        <div class="container__box-things">
-                            <p class="container__box-things--text">Denver</p>
-                            <p class="container__box-things--text">1299,00 zł</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="container__box corners">
-                    <a href="kanas.html">
-                        <img class="container__box-img" src="../img/Kansas/KANSAS 63.png" alt="">
-                        <div class="container__box-things">
-                            <p class="container__box-things--text">Kansas</p>
-                            <p class="container__box-things--text">1499,00 zł</p>
-                        </div>
-                </div>
                 </a>
                 <div class="container__box pouffe">
                     <a href="siedzisko.html">
@@ -196,7 +196,7 @@
             </div>
         </div>
     </footer>
-    <script src="../js/offers.js"></script>
+    <script src="/js/offers.js" type="module"></script>
 </body>
 
 </html>

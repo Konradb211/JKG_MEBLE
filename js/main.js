@@ -7,6 +7,9 @@ const formBtn = document.querySelector(".contact__form-btnBox")
 const textarea = document.querySelector(".textarea")
 const footerYear = document.querySelector(".footeryear")
 const allLinks = document.querySelectorAll(".navbar-mobile__link")
+const bedBtn = document.querySelector(".bedBtn")
+const kitchenCornerBtn = document.querySelector(".kitchenCornerBtn")
+const loungeCornerBtn = document.querySelector(".loungeCornerBtn")
 
 const formFunction = () => {
 	checkMail()

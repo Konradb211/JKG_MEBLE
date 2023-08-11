@@ -562,6 +562,7 @@ body {
 					margin: 2rem 0;
 					list-style: circle;
 					font-size: 1.8rem;
+					font-family: sans-serif;
 				}
 			}
 
@@ -853,6 +854,13 @@ body {
 	//ARIZONA
 	.arizona-container {
 		&__box {
+			&-img {
+				width: 60rem;
+
+				&-items {
+					width: 50rem;
+				}
+			}
 			&-text {
 				margin: 5rem 2rem 0 2rem;
 				h2 {
@@ -892,6 +900,11 @@ body {
 
 				p {
 					padding: 0 2rem;
+				}
+
+				span {
+					font-weight: bold;
+					letter-spacing: 0.1rem;
 				}
 			}
 
@@ -944,11 +957,16 @@ body {
 				&:hover &-picture {
 					filter: brightness(75%);
 				}
-
+				a {
+					display: flex;
+					justify-content: flex-start;
+					align-items: center;
+				}
 				&__btn {
 					position: absolute;
-					align-items: center;
-					text-align: center;
+					top: 28%;
+					left: 50%;
+					transform: translate(-50%, -50%);
 					padding: 1rem 2rem;
 					background: none;
 					border: 2px solid $white;
@@ -1110,7 +1128,7 @@ body {
 		&__box {
 			&-img {
 				img {
-					height: 42rem;
+					height: 100%;
 					width: 100%;
 					overflow: hidden;
 				}
@@ -1153,6 +1171,20 @@ body {
 
 			&:hover {
 				transform: scale(1.1);
+			}
+		}
+	}
+}
+
+@media (min-width: 500px) {
+	.arizona-container {
+		&__box {
+			&-img {
+				width: 50rem;
+
+				&-items {
+					width: 50rem;
+				}
 			}
 		}
 	}
