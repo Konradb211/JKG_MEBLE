@@ -19,8 +19,15 @@ const softImg = document.querySelector(".softImg")
 const soft2Img = document.querySelector(".soft2Img")
 const html = document.querySelector("html")
 const itemPhoto = document.querySelector(".photo")
-const imgContainer = document.querySelector(".arizona-container__box-img-items")
+const imgContainer = document.querySelector(
+	".arizona-container__box-img-items-slider"
+)
+const leftBtn = document.querySelector(".left")
+const rightBtn = document.querySelector(".right")
 const allItemsImages = imgContainer.querySelectorAll("img")
+
+let transformNumber = 0
+let carouselWidth = 100
 
 const checkTextarea = () => {
 	if (textarea.value === "") {
@@ -120,6 +127,35 @@ allItemsImages.forEach(img =>
 	})
 )
 
+const handleCarousel = () => {
+	transformNumber++
+	changeImage()
+}
+
+const changeImage = () => {
+	if (transformNumber === allItemsImages.length - 1) {
+		transformNumber = 0
+	} else if (transformNumber < 0) {
+		transformNumber = allItemsImages.length - 1
+	}
+
+	imgContainer.style.transform = `translateX(${
+		-transformNumber * carouselWidth
+	}px)`
+}
+
+const slideRight = () => {
+	transformNumber++
+	changeImage()
+}
+
+const slideleft = () => {
+	transformNumber--
+	changeImage()
+}
+
+rightBtn.addEventListener("click", slideRight)
+leftBtn.addEventListener("click", slideleft)
 navBtn.addEventListener("click", handleNav)
 handleCurrentYear()
 btnMon.addEventListener("click", showMon)

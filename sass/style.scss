@@ -521,12 +521,12 @@ body {
 	font-weight: 400;
 	overflow: hidden;
 	&__box {
+		position: relative;
 		display: flex;
 		justify-content: space-evenly;
 		align-items: flex-start;
 		flex-wrap: wrap;
 		overflow: hidden;
-
 		&-img {
 			overflow: hidden;
 			img {
@@ -534,15 +534,40 @@ body {
 				width: 100%;
 			}
 			&-items {
-				margin-top: 1rem;
-				cursor: pointer;
-				img {
-					width: 30%;
-					height: 10rem;
-					transition: scale 0.2s;
-					&:hover {
-						scale: 0.9;
+				position: relative;
+				&-slider {
+					display: flex;
+					margin-top: 1rem;
+					transform: translateX(0);
+					transition: transform 0.5s;
+					width: 75rem;
+					cursor: pointer;
+
+					img {
+						height: 10rem;
+						transition: scale 0.2s;
+						&:hover {
+							scale: 0.9;
+						}
 					}
+				}
+				&-arrows {
+					position: absolute;
+					top: 50%;
+					transform: translateY(-50%);
+					padding: 0.3em 0.5em;
+					color: #fff;
+					background-color: rgba(0, 0, 0, 0.4);
+					font-size: 2rem;
+					border: none;
+					cursor: pointer;
+				}
+				.left {
+					left: 0;
+					// pointer-events: none;
+				}
+				.right {
+					right: 0;
 				}
 			}
 		}
@@ -856,10 +881,6 @@ body {
 		&__box {
 			&-img {
 				width: 60rem;
-
-				&-items {
-					width: 50rem;
-				}
 			}
 			&-text {
 				margin: 5rem 2rem 0 2rem;
@@ -1134,8 +1155,7 @@ body {
 				}
 				&-items {
 					img {
-						width: 25%;
-						height: 10rem;
+						height: 11rem;
 					}
 				}
 			}
@@ -1181,10 +1201,6 @@ body {
 		&__box {
 			&-img {
 				width: 50rem;
-
-				&-items {
-					width: 50rem;
-				}
 			}
 		}
 	}
