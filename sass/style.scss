@@ -537,7 +537,6 @@ body {
 				position: relative;
 				&-slider {
 					display: flex;
-					margin-top: 1rem;
 					transform: translateX(0);
 					transition: transform 0.5s;
 					width: 75rem;
@@ -545,7 +544,9 @@ body {
 
 					img {
 						height: 10rem;
+						width: 12rem;
 						transition: scale 0.2s;
+						margin-right: 1rem;
 						&:hover {
 							scale: 0.9;
 						}
@@ -1155,7 +1156,7 @@ body {
 				}
 				&-items {
 					img {
-						height: 11rem;
+						width: 12rem;
 					}
 				}
 			}

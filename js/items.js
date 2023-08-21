@@ -27,7 +27,7 @@ const rightBtn = document.querySelector(".right")
 const allItemsImages = imgContainer.querySelectorAll("img")
 
 let transformNumber = 0
-let carouselWidth = 100
+let carouselWidth = 80
 
 const checkTextarea = () => {
 	if (textarea.value === "") {
@@ -133,15 +133,27 @@ const handleCarousel = () => {
 }
 
 const changeImage = () => {
-	if (transformNumber === allItemsImages.length - 1) {
-		transformNumber = 0
-	} else if (transformNumber < 0) {
-		transformNumber = allItemsImages.length - 1
-	}
+	if (window.matchMedia("(min-width: 529px)").matches) {
+		if (transformNumber === allItemsImages.length - 1) {
+			transformNumber = 0
+		} else if (transformNumber < 0) {
+			transformNumber = allItemsImages.length - 2
+		}
 
-	imgContainer.style.transform = `translateX(${
-		-transformNumber * carouselWidth
-	}px)`
+		imgContainer.style.transform = `translateX(${
+			-transformNumber * carouselWidth
+		}px)`
+	} else if (window.matchMedia("(min-width: 375px)").matches) {
+		if (transformNumber === allItemsImages.length + 1) {
+			transformNumber = 0
+		} else if (transformNumber < 0) {
+			transformNumber = allItemsImages.length
+		}
+
+		imgContainer.style.transform = `translateX(${
+			-transformNumber * carouselWidth
+		}px)`
+	}
 }
 
 const slideRight = () => {

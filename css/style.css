@@ -473,7 +473,6 @@ body {
 }
 .arizona-container__box-img-items-slider {
   display: flex;
-  margin-top: 1rem;
   transform: translateX(0);
   transition: transform 0.5s;
   width: 75rem;
@@ -481,7 +480,9 @@ body {
 }
 .arizona-container__box-img-items-slider img {
   height: 10rem;
+  width: 12rem;
   transition: scale 0.2s;
+  margin-right: 1rem;
 }
 .arizona-container__box-img-items-slider img:hover {
   scale: 0.9;
@@ -998,7 +999,7 @@ body {
     overflow: hidden;
   }
   .arizona-container__box-img-items img {
-    height: 11rem;
+    width: 12rem;
   }
   .buttons {
     display: flex;
