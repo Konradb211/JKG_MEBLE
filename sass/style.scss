@@ -29,6 +29,12 @@ body {
 	cursor: zoom-in;
 	transform: scale(2);
 }
+
+.hide,
+.hidePhotos,
+.hidePhotos3 {
+	display: none;
+}
 // LOGO //
 
 .logo {
@@ -790,6 +796,24 @@ body {
 		top: 1rem;
 		right: 1rem;
 		height: 4rem;
+	}
+}
+
+@media (min-width: 375px) {
+	.hide {
+		display: block;
+	}
+}
+
+@media (min-width: 570px) {
+	.hide {
+		display: none;
+	}
+}
+
+@media (max-width: 416px) {
+	.hidePhotos3 {
+		display: block;
 	}
 }
 

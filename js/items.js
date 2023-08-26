@@ -25,6 +25,7 @@ const imgContainer = document.querySelector(
 const leftBtn = document.querySelector(".left")
 const rightBtn = document.querySelector(".right")
 const allItemsImages = imgContainer.querySelectorAll("img")
+const hideArrows = document.querySelectorAll(".hide")
 
 let transformNumber = 0
 let carouselWidth = 80
@@ -166,9 +167,9 @@ const slideleft = () => {
 	changeImage()
 }
 
+navBtn.addEventListener("click", handleNav)
 rightBtn.addEventListener("click", slideRight)
 leftBtn.addEventListener("click", slideleft)
-navBtn.addEventListener("click", handleNav)
 handleCurrentYear()
 btnMon.addEventListener("click", showMon)
 btnInari.addEventListener("click", showInari)

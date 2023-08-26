@@ -27,6 +27,12 @@ body {
   transform: scale(2);
 }
 
+.hide,
+.hidePhotos,
+.hidePhotos3 {
+  display: none;
+}
+
 .logo {
   position: relative;
   background-color: rgb(30, 30, 30);
@@ -701,6 +707,21 @@ body {
   height: 4rem;
 }
 
+@media (min-width: 375px) {
+  .hide {
+    display: block;
+  }
+}
+@media (min-width: 570px) {
+  .hide {
+    display: none;
+  }
+}
+@media (max-width: 416px) {
+  .hidePhotos3 {
+    display: block;
+  }
+}
 @media (min-width: 768px) {
   .logo {
     display: none;
