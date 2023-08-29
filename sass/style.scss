@@ -799,8 +799,9 @@ body {
 	}
 }
 
-@media (min-width: 375px) {
-	.hide {
+@media (min-width: 360px) {
+	.hide,
+	.pouffeHide {
 		display: block;
 	}
 }
@@ -811,9 +812,15 @@ body {
 	}
 }
 
-@media (max-width: 416px) {
+@media (max-width: 411px) {
 	.hidePhotos3 {
 		display: block;
+	}
+}
+
+@media (min-width: 390px) {
+	.pouffeHide {
+		display: none;
 	}
 }
 

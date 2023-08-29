@@ -26,9 +26,8 @@ const leftBtn = document.querySelector(".left")
 const rightBtn = document.querySelector(".right")
 const allItemsImages = imgContainer.querySelectorAll("img")
 const hideArrows = document.querySelectorAll(".hide")
-
 let transformNumber = 0
-let carouselWidth = 80
+let carouselWidth = 85
 
 const checkTextarea = () => {
 	if (textarea.value === "") {
@@ -135,7 +134,8 @@ const handleCarousel = () => {
 
 const changeImage = () => {
 	if (window.matchMedia("(min-width: 529px)").matches) {
-		if (transformNumber === allItemsImages.length - 1) {
+		carouselWidth = 90
+		if (transformNumber === allItemsImages.length - 2) {
 			transformNumber = 0
 		} else if (transformNumber < 0) {
 			transformNumber = allItemsImages.length - 2
@@ -144,11 +144,12 @@ const changeImage = () => {
 		imgContainer.style.transform = `translateX(${
 			-transformNumber * carouselWidth
 		}px)`
-	} else if (window.matchMedia("(min-width: 375px)").matches) {
-		if (transformNumber === allItemsImages.length + 1) {
+	} else if (window.matchMedia("(min-width: 360px)").matches) {
+		carouselWidth = 85
+		if (transformNumber === allItemsImages.length) {
 			transformNumber = 0
 		} else if (transformNumber < 0) {
-			transformNumber = allItemsImages.length
+			transformNumber = allItemsImages.length - 2
 		}
 
 		imgContainer.style.transform = `translateX(${
@@ -157,19 +158,19 @@ const changeImage = () => {
 	}
 }
 
-const slideRight = () => {
+const sliderRight = () => {
 	transformNumber++
 	changeImage()
 }
 
-const slideleft = () => {
+const sliderLeft = () => {
 	transformNumber--
 	changeImage()
 }
 
 navBtn.addEventListener("click", handleNav)
-rightBtn.addEventListener("click", slideRight)
-leftBtn.addEventListener("click", slideleft)
+rightBtn.addEventListener("click", sliderRight)
+leftBtn.addEventListener("click", sliderLeft)
 handleCurrentYear()
 btnMon.addEventListener("click", showMon)
 btnInari.addEventListener("click", showInari)
