@@ -48,7 +48,8 @@
             <div class="main">
                 <div class="main-box">
                     <div class="main-box-img">
-                        <img class="main-box-img-picture" src="./img/BED.png" alt="lozko do sypialni nevada">
+                        <img class="main-box-img-picture" src="./img/NEVADA-84-2048x1536.webp"
+                            alt="lozko do sypialni nevada">
                         <a href="/subwebsites/offers.html"> <button class="main-box-img__btn bedBtn">
                                 Zobacz więcej
                             </button></a>
@@ -211,7 +212,7 @@
                 <div class="form-wrapper">
                     <div class="contact__form">
                         <h2>Napisz do nas!</h2>
-                        <form>
+                        <form class="" action="https://formsubmit.io/send/biuro@jkgmeble.pl" method="POST">
                             <div class="contact__form-box">
                                 <label for="email">Email:</label>
                                 <input class="text" type="email" id="email" name="email" required
@@ -220,14 +221,16 @@
                             </div>
                             <div class="contact__form-box">
                                 <label class="textareaLabel" for="msg">Wiadomość:</label>
-                                <textarea class="textarea 
+                                <textarea class="textarea
                         " name="msg" id="msg" required></textarea>
                                 <p class="errorArea">Musisz wypełnić to pole!</p>
                             </div>
+                            <input name="_redirect" type="hidden" id="name" value="https://www.jkgmeble.pl">
+                            <div class="contact__form-btnBox">
+                                <button type="submit" name="send">Wyślij</button>
+                            </div>
                         </form>
-                        <div class="contact__form-btnBox">
-                            <button>Wyślij</button>
-                        </div>
+                        <p class="msg-status"></p>
                     </div>
                 </div>
             </div>
