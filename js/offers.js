@@ -5,8 +5,9 @@ const allLinks = document.querySelectorAll(".navbar-mobile__link")
 const beds = document.querySelectorAll(".beds")
 const kitchenCorners = document.querySelectorAll(".kitchenCorners")
 const corners = document.querySelectorAll(".corners")
-const pouffe = document.querySelector(".pouffe")
+const pouffe = document.querySelectorAll(".pouffe")
 const list = document.querySelector(".list")
+const bench = document.querySelectorAll(".bench")
 
 const checkTextarea = () => {
 	if (textarea.value === "") {
@@ -47,35 +48,48 @@ const furnituresList = () => {
 			kitchenCorner => (kitchenCorner.style.display = "none")
 		)
 		corners.forEach(corner => (corner.style.display = "none"))
-		pouffe.style.display = "none"
+		pouffe.forEach(pouffe => (pouffe.style.display = "none"))
+		bench.forEach(bench => (bench.style.display = "none"))
 	} else if (list.value === "kitchen-corner") {
 		kitchenCorners.forEach(
 			kitchenCorner => (kitchenCorner.style.display = "block")
 		)
 		beds.forEach(bed => (bed.style.display = "none"))
 		corners.forEach(corner => (corner.style.display = "none"))
-		pouffe.style.display = "none"
+		pouffe.forEach(pouffe => (pouffe.style.display = "none"))
+		bench.forEach(bench => (bench.style.display = "none"))
 	} else if (list.value === "corner") {
 		corners.forEach(corner => (corner.style.display = "block"))
 		kitchenCorners.forEach(
 			kitchenCorner => (kitchenCorner.style.display = "none")
 		)
 		beds.forEach(bed => (bed.style.display = "none"))
-		pouffe.style.display = "none"
+		pouffe.forEach(pouffe => (pouffe.style.display = "none"))
+		bench.forEach(bench => (bench.style.display = "none"))
 	} else if (list.value === "pouffe") {
 		kitchenCorners.forEach(
 			kitchenCorner => (kitchenCorner.style.display = "none")
 		)
 		beds.forEach(bed => (bed.style.display = "none"))
 		corners.forEach(corner => (corner.style.display = "none"))
-		pouffe.style.display = "block"
+		pouffe.forEach(pouffe => (pouffe.style.display = "block"))
+		bench.forEach(bench => (bench.style.display = "none"))
+	} else if (list.value === "bench") {
+		kitchenCorners.forEach(
+			kitchenCorner => (kitchenCorner.style.display = "none")
+		)
+		beds.forEach(bed => (bed.style.display = "none"))
+		corners.forEach(corner => (corner.style.display = "none"))
+		pouffe.forEach(pouffe => (pouffe.style.display = "none"))
+		bench.forEach(bench => (bench.style.display = "block"))
 	} else if (list.value === "all") {
 		kitchenCorners.forEach(
 			kitchenCorner => (kitchenCorner.style.display = "block")
 		)
 		beds.forEach(bed => (bed.style.display = "block"))
 		corners.forEach(corner => (corner.style.display = "block"))
-		pouffe.style.display = "block"
+		pouffe.forEach(pouffe => (pouffe.style.display = "block"))
+		bench.forEach(bench => (bench.style.display = "block"))
 	}
 }
 
